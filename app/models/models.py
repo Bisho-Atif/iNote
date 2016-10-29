@@ -11,7 +11,7 @@ class User(db.Model):
 class Note(db.Model):
     __tablename__ = 'notes'
     id = db.Column(db.Integer, primary_key= True)
-    title = db.Column(db.String(64), index = True, unique=True)
+    title = db.Column(db.String(64), index = True)
     content = db.Column(db.Text())
     created_on = db.Column(db.DateTime())
     user_id = db.Column(db.Integer, db.ForeignKey('users.id')) 
