@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+
+{% block title%}Add a note{% endblock %}
+
+{% block content%}
+
+<br><br><br><br><br><br><br><br><br>
+<form class="form-horizontal" action="/add_note" method="POST">
+<fieldset>
+
+<div class="container">
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+{{ message }}
+</div>
+{% endfor %}
+
+<!-- Form Name -->
+
+<form class="form-horizontal" action="/add_note" method="POST">
+<fieldset>
+<legend style="text-align:center">Adding note</legend>
+<!-- Form Name -->
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="title">Note title</label>  
+  <div class="col-md-4">
+  <input id="title" name="title" type="text" placeholder="Title" class="form-control input-md" required="" >
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="content">Note content</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="content" name="content" required="" ></textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for=""></label>
+  <div class="col-md-4">
+    <button id="" name="" class="btn btn-primary" >Add note !!</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+<br><br><br><br><br><br><br>
+ 
+{% endblock %}

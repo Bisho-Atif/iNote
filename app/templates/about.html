@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title%}About{% endblock %}
+
+{% block style %}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url({{ url_for('static', filename = 'img/4.jpg')}}) no-repeat center center;
+    background-size: cover;
+}
+
+{% endblock %}
+
+{% block header %}
+<!-- Header -->
+    <<a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>About me</h1>
+                        <h3>contact me here</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/Bisho.Atif" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Bisho-Atif" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/bishoy-atif-samy-5912b4124?trk=nav_responsive_tab_profile" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+{% endblock %}
+
+{% block content %}
+  <a  name="services"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">About the project</h2>
+                    <p class="lead">This is a project called 'iNote'.<br> It 's a simple note to write in. It 's made  for CS50 final project.<br>Front-End : Bootstrap templates.<br>Back-End : Flask framework with Python.</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="{{url_for('static', filename='img/favicon.png')}}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">About me </h2>
+                    <p class="lead">My name is Bishoy Atif.<br>I'm a 19-years-old web developer from Egypt.<br>I have intermediate experience with python.<br>I used to develop web apps with flask web framework.<br>I know a little about javascript and ajax.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="{{url_for('static', filename='img/my_pic.jpg')}}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+    
+        <!-- /.container -->
+
+    </div>
+{% endblock %}
