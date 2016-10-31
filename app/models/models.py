@@ -1,5 +1,5 @@
 from app import db
-
+from datetime import datetime
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key= True)
@@ -13,7 +13,6 @@ class Note(db.Model):
     id = db.Column(db.Integer, primary_key= True)
     title = db.Column(db.String(64), index = True)
     content = db.Column(db.Text())
-    created_on = db.Column(db.DateTime())
     user_id = db.Column(db.Integer, db.ForeignKey('users.id')) 
 
 db.create_all()
